@@ -10,12 +10,12 @@ pipeline{
                checkout scm
                }
           }
-         satage('Terraform Init'){
+         stage('Terraform Init'){
              steps{
                  sh 'terraform init'
              }
          }
-         satage('Terraform apply'){
+         stage('Terraform apply'){
              steps{
                  sh 'terraform apply --auto-approve'
              }
